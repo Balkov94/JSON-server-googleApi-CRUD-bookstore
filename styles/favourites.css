@@ -1,0 +1,32 @@
+#favourites{
+     width: 80%;
+     border: 2px solid red;
+     margin: auto;
+     height: 90vh;
+     display: flex;
+}
+.favourites-style{
+     width: 80%;
+     display: flex;
+     flex-direction: column;
+     margin: auto;
+     min-height: 80vh;
+     height: fit-content;
+     border-right: 1px solid gray;
+     border-left: 1px solid gray;
+
+}
+.cards-container-fav{
+     background-color: black;
+     width: 100%;
+     display: flex;
+     flex-direction: row;
+     flex-wrap: wrap;
+     padding-top: 18px;
+     padding: 20px;
+     padding-bottom: 15vh;
+     gap: 40px 32px;
+}
+
+
+/* using cards_container styles */

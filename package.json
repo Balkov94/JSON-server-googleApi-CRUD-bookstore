@@ -1,0 +1,26 @@
+{
+  "name": "homework2",
+  "version": "1.0.0",
+  "description": "google book api homework 2 - modis",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "lite-server",
+    "api": "json-server --watch db.json --routes routes.json"
+  },
+  "devDependencies": {
+    "json-server": "^0.17.0",
+    "lite-server": "^2.6.1"
+  },
+  "keywords": [
+    "fetch",
+    "requests",
+    "javascript",
+    "css",
+    "html",
+    "design",
+    "DOM"
+  ],
+  "author": "Nikola Balkov",
+  "license": "ISC"
+}

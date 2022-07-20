@@ -1,0 +1,66 @@
+{
+  "posts": [
+    {
+      "title": "aaa",
+      "author": "bbbbb",
+      "id": 7
+    },
+    {
+      "title": "Hi",
+      "author": "trayan",
+      "id": 8
+    },
+    {
+      "title": "hi ",
+      "author": "george",
+      "id": 9
+    },
+    {
+      "title": "qqqq",
+      "author": "aaaaa",
+      "id": 10
+    },
+    {
+      "title": "PATCH new test name ",
+      "author": "new test author",
+      "id": 15
+    }
+  ],
+  "comments": [],
+  "favourites": [
+    {
+      "id": "Bm8Z3-7aAjYC",
+      "volumeInfo": {
+        "title": "An Eye for a Dog",
+        "imageLinks": {
+          "thumbnail": "http://books.google.com/books/content?id=Bm8Z3-7aAjYC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+        },
+        "description": "Develop your \"eye\" for sound movement and structure whether you are serious about purebred dogs or are an enthusiast. Learn how color, marking, size and leash position affect the look of the dog. Over 100 judging scenarios that test your eye.",
+        "authors": "author: Robert W. Cole",
+        "publishedDate": "year: 2004"
+      }
+    },
+    {
+      "id": "fgI3DwAAQBAJ",
+      "volumeInfo": {
+        "title": "Dog Training For Dummies",
+        "imageLinks": {
+          "thumbnail": "http://books.google.com/books/content?id=fgI3DwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+        },
+        "description": "Make training fun and effective This friendly guide shows you how to select the right training method for your dog, based on his unique personality, to reach your desired goals. Whether you want to teach Buddy to sit or master retrieving, you'll get expert training tips and techniques for you and your dog — to ensure a mutually respectful relationship with your four-legged friend. Concentrate on canines — discover why your dog acts the way she does, understand her nutritional needs, and ready yourself for the task of training your dog Prep for your pup — prepare your home for your puppy's arrival, discover the importance of socialization, and get started on housetraining Put your best paw forward — teach basic commands like Sit, Stay, and Down, and get the scoop on how to deal with doggie don'ts like chewing, digging, and excessive barking Take training to the next level — get involved in organized dog activities and competitions, where you'll both show off impressive tricks like retrieving, figure 8s, and much more Open the book and find: Step-by-step instructions for teaching your dog basic commands Helpful advice on crate training Safe ways to address aggression and separation anxiety Tips for teaching Buddy to behave himself around people and other dogs Techniques to keep your senior dog feeling young Health issues that can interfere with training Experts to turn to for training help Learn to: Use positive reinforcement as an effective teaching tool Select the gear you need for training success Teach the basics including Sit, Stay, and Down Eliminate unwanted behavior",
+        "authors": "author: Jack Volhard, Wendy Volhard",
+        "publishedDate": "year: 2010"
+      }
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "fname": "John",
+      "lname": "Doe",
+      "username": "john",
+      "password": "john123",
+      "role": "admin"
+    }
+  ]
+}
