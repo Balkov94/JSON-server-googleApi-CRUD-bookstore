@@ -88,6 +88,8 @@ function fetchData() {
                for (let i = 0; i < data.items.length; i++) {
                     let currBook = data.items[i];
                     createAppendCard(currBook, cardsContainer);
+
+
                }
           })
           .then(() => {
@@ -197,18 +199,29 @@ function createAppendCard(currBook, page) {
      annotationBtn.className = "annotation-btn";
      annotationBtn.id = "annButton" + bookID; // a + id , because some id's start with number
      annotationContainer.append(annotationBtn);
-     // add modal container for showing annotations
+
+     // 0 add modal container for showing annotations
      let modalContainer = document.createElement("div");
      modalContainer.className = "modal";
      modalContainer.id = "modal" + bookID;
-     let modalContent = document.createElement("div");
-     modalContent.className = "modal-content";
-     let modalDateBox = document.createElement("div");
-     modalDateBox.className = "modal-date";
-     let modalTextBox = document.createElement("div");
-     modalTextBox.className = "modal-text";
-     modalContent.append(modalDateBox, modalTextBox)
-     modalContainer.append(modalContent);
+
+     // add new annotation btn
+     let addAnnBtnContainer = document.createElement("div");
+     addAnnBtnContainer.className = "add-ann-btn-container";
+     let addNewAnnotationBtn = document.createElement("button");
+     addNewAnnotationBtn.innerText = "add new annotation";
+     addNewAnnotationBtn.className = "addAnnBtn";
+     addNewAnnotationBtn.id = `addAnnotation${bookID}`;
+     addAnnBtnContainer.append(addNewAnnotationBtn);
+
+     // adding 1- "add annutations wrapper"
+     let annotationsWrapper = document.createElement("div");
+     annotationsWrapper.className = "modal-content-wrapper";
+     annotationsWrapper.id = `annotationsWrapper${bookID}`;
+
+     modalContainer.append(addAnnBtnContainer, annotationsWrapper);
+
+
 
      cardContainer.append(cardImg, cardBodyDesc, cardUl, cardButtonsContainer, annotationContainer, modalContainer)
 

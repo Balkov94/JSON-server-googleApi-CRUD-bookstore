@@ -126,9 +126,10 @@ header ul li a:hover{
      }
    }
 
-/* card  */
+/* CARD _________________________________________________ */
 .card{
      width: 300px;
+     height: 700px;
      display: flex;
      flex-direction: column;
      border: 2px solid rgb(193, 193, 193);
@@ -217,25 +218,45 @@ header ul li a:hover{
 /* MODAL annotation __________________________________________ */
 .modal{
      width: 100%;
-     height: 100%;
+     height: 700px;
      border: 2px solid blue;
      position: absolute;
      top: 0;
      left: 0;
      z-index: 100;
      background-color: black;
-     opacity: 0.7;
+     opacity: 0.9;
+     gap: 10px 12px;
      display: flex;
      flex-direction: column;
-     overflow: auto;
+    
      visibility: hidden;
+     
+}
+.add-ann-btn-container{
+     width: 100%;
+     height: 30px;
+}
+.addAnnBtn{
+    text-align: center;
+    width: 100% !important;
+}
+.modal-content-wrapper{
+     margin-top: 18px;
+     display: flex;
+     flex-direction: column;
+     gap: 10px 15px;
+     overflow-y: auto;
+     border: 2px solid green;
 }
 .modal-content{
      display: flex;
      border: 2px solid red;
      flex-direction: row;
-     height: 150px;
+     min-height: 150px;
      width: 100%;
+     justify-content: center;
+     align-items: center;
 }
 .modal-date{
      display: flex;
@@ -246,14 +267,71 @@ header ul li a:hover{
 }
 .modal-text{
      display: flex;
+     flex-direction: column;
      border: 2px solid rgb(44, 171, 86);
      flex-direction: column;
      height: 100%;
      width: 74%;
+     position: relative;
+     overflow-y: auto;
+}
+.modal-text h6{
+     text-align: center;
+     font-weight: 700;
+     text-decoration: underline;
+}
+.modal-buttons-container{
+     display: flex;
+     flex-direction: row;
+     /* height: 20px; */
+     width: 100%;
+     border: 2px solid blue;
+     font-size: 10px;
+     position: absolute;
+     bottom:0;
+     left: 0;
+}
+/* ann FORM container ____________________________________________ */
+.ann-form-container{
+     position: fixed;
+     width: 40%;
+     height: 80vh;
+     z-index: 300;
+     border: 2px solid orange;
+     background-color: rgb(2, 39, 2);
+     top: 0;
+     left: 50%;
+     transform: translateX(-50%);
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     gap: 16px 25px;
+     
+}
+.ann-form{
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     gap: 16px 25px;
+     width: 80%;
+}
+.ann-form input,textarea{
+     width: 100%;
+}
+.ann-from-btn{
+     width: 120px !important;
+     height: 30px !important;
+}
+.close-modal-form{
+     position: fixed;
+     right: 10px;
+     top: 10px;
 }
 
 
-/* Pegination styles _____________________*/
+/* Pegination styles ______________________________________________*/
 #pagination-container{
      display: flex;
      flex-direction: row;

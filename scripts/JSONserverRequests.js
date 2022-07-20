@@ -49,29 +49,31 @@ test.addEventListener("click", async function () {
      //      })
 
      // DELETE
-     fetch(`http://localhost:3000/api/posts/14`, {
-          method: "DELETE"
-     })
-          .then(res => {
-               if (!res.ok) {
-                    console.log(`response object status code: ${res.status}`);
-                    throw new Error("bad DELETE request")
-               }
-               else {
-                    console.log(`response object status code: ${res.status}`);
-                    return res.json();
-               }
-          })
-          .then(data => {
-               console.log(data);
-          })
-          .catch(err => console.log(err.message))
+     // fetch(`http://localhost:3000/api/posts/14`, {
+     //      method: "DELETE"
+     // })
+     //      .then(res => {
+     //           if (!res.ok) {
+     //                console.log(`response object status code: ${res.status}`);
+     //                throw new Error("bad DELETE request")
+     //           }
+     //           else {
+     //                console.log(`response object status code: ${res.status}`);
+     //                return res.json();
+     //           }
+     //      })
+     //      .then(data => {
+     //           console.log(data);
+     //      })
+     //      .catch(err => console.log(err.message))
 
 
 
 
 })
 
+
+// favourites page JSON server BOOK requests______________________________
 function postRequest(book) {
      fetch(`http://localhost:3000/api/favourites/`, {
           method: "POST",
@@ -125,7 +127,7 @@ function getRequest() {
           })
 }
 
-function deleteRequest(bookID){
+function deleteRequest(bookID) {
      fetch(`http://localhost:3000/api/favourites/${bookID}`, {
           method: "DELETE"
      })
@@ -148,3 +150,81 @@ function deleteRequest(bookID){
 }
 
 // annotations requests ____________________________________
+// get annotations for current book
+function annotationGetRequest(bookID) {
+     // debugger;
+     fetch(`http://localhost:3000/api/annotations/${bookID}`)
+          .then(res => {
+               if (!res.ok) {
+                    console.log("annotation get status code: " + res.status);
+                    throw new Error("fail annotation get method")
+               }
+               return res.json();
+          })
+          .then(data => {
+               console.log(data);
+               // add anotations to book- modal card
+               let currAnnWrapper = document.getElementById(`annotationsWrapper${bookID}`);
+               currAnnWrapper.innerHTML = "";
+               // create modal content box (date,title,content ...) and append it
+               data.annotationCollection.forEach(annotation => {
+                    createModalContentElement(annotation, currAnnWrapper);
+               })
+
+          })
+          .catch(err => {
+               console.log(err.message);
+          })
+
+     function createModalContentElement(annObj, currAnnWrapper) {
+          // content - title, text,date 
+          let modalContent = document.createElement("div");
+          modalContent.className = "modal-content";
+          let modalDateBox = document.createElement("div");
+          modalDateBox.className = "modal-date";
+          let modalTextBox = document.createElement("div");
+          modalTextBox.className = "modal-text";
+
+          // order obj props in boxes
+          let createDate = document.createElement("p");
+          createDate.innerText = `created on:${annObj.timeOfCreation}`;
+          let editedDate = document.createElement("p");
+          editedDate.innerText = `edited on:${annObj.timeOFEdit}`;
+          let title = document.createElement("h6");
+          title.innerText = `${annObj.title}`;
+          let content = document.createElement("p");
+          content.innerText = `${annObj.content}`;
+
+          modalDateBox.append(createDate, editedDate);
+          modalTextBox.append(title, content);
+
+          // add buttons EDIT - DELETE annotation
+          let modalBtnsContainer = document.createElement("div");
+          modalBtnsContainer.className = "modal-buttons-container";
+          let editBtn = document.createElement("button");
+          editBtn.innerText = "Edit";
+          let deleteBtn = document.createElement("button");
+          deleteBtn.innerText = "Delete";
+
+          modalBtnsContainer.append(editBtn,deleteBtn);
+
+          modalTextBox.append(modalBtnsContainer)
+          modalContent.append(modalDateBox, modalTextBox)
+          // add edit delete btns functions
+
+
+
+
+          
+          currAnnWrapper.append(modalContent);
+          //content: "ann1 content"
+          // id: "1"
+          // timeOFEdit: "12:00"
+          // timeOfCreation: "11:00"
+          // title: "ann1 title"
+
+     }
+
+
+}
+

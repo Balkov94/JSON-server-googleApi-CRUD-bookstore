@@ -124,16 +124,43 @@
                     </div>
                     <!-- modal -->
                     <!-- for id on modal use BOOK ID -->
-                    <div class="modal" id="test">
-                         <div class="modal-content">
-                              <div class="modal-date">
-                                   <p>created:on date</p>
-                                   <p>edited: on date</p>
-                              </div>
-                              <div class="modal-text">
-                                   <p>modal text here</p>
-                              </div>
+                    <div class="modal" id="test" style="visibility: visible;">
+                         <!-- button to add new annotation -->
+                         <div class="add-ann-btn-container">
+                              <button class="addAnnBtn">add new annotation</button>
                          </div>
+                         <!-- example how to show fetched annotations -->
+                         <div class="modal-content-wrapper">
+                              <div class="modal-content">
+                                   <div class="modal-date">
+                                        <p>created:on date</p>
+                                        <p>edited: on date</p>
+                                   </div>
+                                   <div class="modal-text">
+                                        <h6>annotation title</h6>
+                                        <p>modal text here</p>
+                                        <div class="modal-buttons-container">
+                                             <button>edit</button>
+                                             <button>delete</button>
+                                        </div>
+                                   </div>
+                              </div>      
+                         </div>
+                      
+                    </div>
+                       <!-- annotation form - modal -->
+                       <div class="ann-form-container">
+                         <div class="close-modal-form">
+                              <h1 >X</h1>
+                         </div>
+                         <form action="submit" class="ann-form">
+                             <p>Title:</p>
+                              <input type="text" name="annotation-title" id="annotation-title">
+                              <p>annotation content:</p>
+                              <textarea name="annotation-content" id="annotation-content" cols="30" rows="10"></textarea>
+                              <button class="ann-from-btn">save</button>
+                         </form>
+
                     </div>
                </div>
 
