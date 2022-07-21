@@ -3,21 +3,21 @@ let test = document.getElementById("test");
 test.addEventListener("click", async function () {
      // debugger;
      // GET
-     // fetch(`http://localhost:3000/api/posts/8`) //post id 8
-     //      .then(res => {
-     //           if (!res.ok) {
-     //                throw new Error("bad fetch")
-     //           }
-     //           else {
-     //                return res.json();
-     //           }
-     //      })
-     //      .then(data => {
-     //           console.log(data);
-     //      })
-     //      .catch(err => {
-     //           console.log(err.message);
-     //      })
+     fetch(`http://localhost:3000/api/annotations/`) //post id 8
+          .then(res => {
+               if (!res.ok) {
+                    throw new Error("bad fetch")
+               }
+               else {
+                    return res.json();
+               }
+          })
+          .then(data => {
+               console.log(data);
+          })
+          .catch(err => {
+               console.log(err.message);
+          })
 
      // post request- create 
      // put - update (!!! BODY - ENTIRE NEW OBJECT WITH ALL PROPS)
@@ -111,7 +111,6 @@ function getRequest() {
                }
           })
           .then(data => {
-               console.log(`JSON server data: ${data}`);
                // add to fav page and print
                data.forEach(book => {
                     createAppendCard(book, favPage)
@@ -149,11 +148,13 @@ function deleteRequest(bookID) {
           .catch(err => console.log(err.message))
 }
 
+
+// *********************************************************
 // annotations requests ____________________________________
 // get annotations for current book
 function annotationGetRequest(bookID) {
      // debugger;
-     fetch(`http://localhost:3000/api/annotations/${bookID}`)
+     fetch(`http://localhost:3000/api/annotations/`)//fet all anotations then sort by bookId
           .then(res => {
                if (!res.ok) {
                     console.log("annotation get status code: " + res.status);
@@ -162,13 +163,17 @@ function annotationGetRequest(bookID) {
                return res.json();
           })
           .then(data => {
-               console.log(data);
+               const currBookCollection = data.filter(annotation => {
+                    if (annotation.book == bookID) {
+                         return annotation;
+                    }
+               })
                // add anotations to book- modal card
                let currAnnWrapper = document.getElementById(`annotationsWrapper${bookID}`);
                currAnnWrapper.innerHTML = "";
                // create modal content box (date,title,content ...) and append it
-               data.annotationCollection.forEach(annotation => {
-                    createModalContentElement(annotation, currAnnWrapper);
+               currBookCollection.forEach(currAnnObj => {
+                    createModalContentElement(currAnnObj, currAnnWrapper);
                })
 
           })
@@ -176,7 +181,7 @@ function annotationGetRequest(bookID) {
                console.log(err.message);
           })
 
-     function createModalContentElement(annObj, currAnnWrapper) {
+     function createModalContentElement(currAnnObj, currAnnWrapper) {
           // content - title, text,date 
           let modalContent = document.createElement("div");
           modalContent.className = "modal-content";
@@ -187,18 +192,18 @@ function annotationGetRequest(bookID) {
 
           // order obj props in boxes
           let createDate = document.createElement("p");
-          createDate.innerText = `created on:${annObj.timeOfCreation}`;
+          createDate.innerText = `created on:${currAnnObj.timeOfCreation}`;
           let editedDate = document.createElement("p");
-          editedDate.innerText = `edited on:${annObj.timeOFEdit}`;
+          editedDate.innerText = `edited on:${currAnnObj.timeOFEdit}`;
           let title = document.createElement("h6");
-          title.innerText = `${annObj.title}`;
+          title.innerText = `${currAnnObj.title}`;
           let content = document.createElement("p");
-          content.innerText = `${annObj.content}`;
+          content.innerText = `${currAnnObj.content}`;
 
           modalDateBox.append(createDate, editedDate);
           modalTextBox.append(title, content);
 
-          // add buttons EDIT - DELETE annotation
+          // add buttons EDIT - DELETE annotation ADD Listeners
           let modalBtnsContainer = document.createElement("div");
           modalBtnsContainer.className = "modal-buttons-container";
           let editBtn = document.createElement("button");
@@ -206,7 +211,12 @@ function annotationGetRequest(bookID) {
           let deleteBtn = document.createElement("button");
           deleteBtn.innerText = "Delete";
 
-          modalBtnsContainer.append(editBtn,deleteBtn);
+          deleteBtn.addEventListener("click",function (){
+               annotationDeleteRequest(currAnnObj);
+               modalContent.remove();
+          })
+
+          modalBtnsContainer.append(editBtn, deleteBtn);
 
           modalTextBox.append(modalBtnsContainer)
           modalContent.append(modalDateBox, modalTextBox)
@@ -215,7 +225,7 @@ function annotationGetRequest(bookID) {
 
 
 
-          
+
           currAnnWrapper.append(modalContent);
           //content: "ann1 content"
           // id: "1"
@@ -225,6 +235,46 @@ function annotationGetRequest(bookID) {
 
      }
 
+
+}
+
+function annotationPostRequest(newAnnObj) {
+     fetch(`http://localhost:3000/api/annotations/`, {
+          method: "POST",
+          headers: {
+               'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(newAnnObj)
+     })
+          .then(res => {
+               if (!res.ok) {
+                    console.log(res.status);
+                    return new Error("post new annotation error")
+               }
+               return res.json();
+          })
+          .then(data => {
+               console.log(data);
+          })
+          .catch(err => console.log(err.message))
+
+}
+
+function annotationDeleteRequest(annObj) {
+     fetch(`http://localhost:3000/api/annotations/${annObj.id}`, {
+          method: "DELETE"  
+     })
+          .then(res => {
+               if (!res.ok) {
+                    console.log(res.status);
+                    return new Error("DELETE annotation error")
+               }
+               return res.json();
+          })
+          .then(data => {
+               console.log(data);
+          })
+          .catch(err => console.log(err.message))
 
 }
 

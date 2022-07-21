@@ -263,7 +263,8 @@ header ul li a:hover{
      border: 2px solid rgb(124, 10, 10);
      flex-direction: column;
      height: 100%;
-     width:26%;
+     width:30%;
+     font-size: 14px;
 }
 .modal-text{
      display: flex;
@@ -320,7 +321,7 @@ header ul li a:hover{
 .ann-form input,textarea{
      width: 100%;
 }
-.ann-from-btn{
+.ann-form-btn{
      width: 120px !important;
      height: 30px !important;
 }
@@ -328,6 +329,11 @@ header ul li a:hover{
      position: fixed;
      right: 10px;
      top: 10px;
+     color: red;
+     border: 2px solid white;
+}
+.close-modal-form:hover{
+     cursor: pointer;
 }
 
 
