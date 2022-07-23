@@ -1,45 +1,43 @@
-// MODAL functions (open close)
-// let allModals = document.getElementsByClassName("modal");
-// allModals.forEach(modal => {
-//      modal.addEventListener()
-// });
 
-// all annotation btns
 // annBtn id = annButton+book id
 // modal id = .modal + annbtnID 
-function addToggleModaltoAllCards() {
-     let annButtons = document.querySelectorAll(".annotation-btn");//modal toggle
-     let addAnnBtn = document.querySelectorAll(".addAnnBtn");
+// 1.get all cards annotations(button) and add them toggle (show/hide)
+// 2.get all cards "add NEW annotation" button and add them function (create annotation)
+// function addToggleModaltoAllCards() {
+//      let annButtons = document.querySelectorAll(".annotation-btn");//modal toggle
+//      let addAnnBtn = document.querySelectorAll(".addAnnBtn");
 
-     for (let i = 0; i < annButtons.length; i++) {
-          let currModal = document.querySelector(`.modal#modal${(annButtons[i].id).replace("annButton", "")}`);
-          currModal.style.visibility = "hidden";
+//      for (let i = 0; i < annButtons.length; i++) {
+//           debugger;
+//           let currModal = document.querySelector(`.modal#modal${(annButtons[i].id).replace("annButton", "")}`);
+//           currModal.style.visibility = "hidden";
 
-          annButtons[i].addEventListener("click", function () {
-               if (currModal.style.visibility == "hidden") {
-                    currModal.style.visibility = "visible";
-               }
-               else {
-                    currModal.style.visibility = "hidden";
-               }
-          })
-          // add each annotation button func to make get request for his annotations
-          let currBookID = (annButtons[i].id).replace("annButton", "");
-          annButtons[i].addEventListener("click", () => annotationGetRequest(currBookID));
-          addAnnBtn[i].addEventListener("click", () => createNewAnnotation(currBookID));
 
-     }
+//           annButtons[i].addEventListener("click", function () {
+//                if (currModal.style.visibility == "hidden") {
+//                     currModal.style.visibility = "visible";
+//                }
+//                else {
+//                     currModal.style.visibility = "hidden";
+//                }
+//           })
+//           // add each annotation button func to make get request for his annotations
+//           let currBookID = (annButtons[i].id).replace("annButton", ""); 
+//           annButtons[i].addEventListener("click", () => annotationGetRequest(currBookID));
+//           addAnnBtn[i].addEventListener("click", () => createNewAnnotation(currBookID));
 
-}
+
+//      }
+
+// }
 
 function createNewAnnotation(currBookID) {
-     // 1. Open modal for new annotation data
-     console.log("open new form");
      openFormModal(currBookID);
 }
 
-
-function openFormModal(currBookID) {
+// 1.If invoke openFormModal(currBookID) - open modal and create new annotation
+// 2.If invoke openFormModal(currBookID,editAnnID) - open modal and edit old annotation
+function openFormModal(currBookID, editAnnID) {
      let formContainer = document.createElement("div");
      formContainer.className = "ann-form-container";
 
@@ -71,25 +69,59 @@ function openFormModal(currBookID) {
      saveBtn.innerText = "save";
      saveBtn.className = "ann-form-btn";
 
-     saveBtn.addEventListener("click", function (e) {
-          e.preventDefault();
+
+     // if edit - > fetch old ann data and put it into FORM
+     let oldAnn;
+     if (editAnnID) {
+          console.log(editAnnID);
+          fetch(`http://localhost:3000/api/annotations/${editAnnID}`)//fet all anotations then sort by bookId
+               .then(res => {
+                    if (!res.ok) {
+                         console.log("annotation get status code: " + res.status);
+                         throw new Error("fail annotation get method")
+                    }
+                    return res.json();
+               })
+               .then(data => {
+                    inputTextTitle.value = data.title;
+                    textArea.value = data.content;
+                    oldAnn = data;
+               })
+               .catch(err => {
+                    console.log(err.message);
+               })
+     }
+
+     saveBtn.addEventListener("click", function (event) {
+          event.preventDefault();
           const formData = new FormData(form);
-          console.log(formData.get("inputTextTitle"));
-          console.log(formData.get("annotationContentP"));
           let createDate = new Date().toLocaleString();//7/21/2022, 3:14:53 PM good format
-          let annObj = {
-               "title": `${formData.get("inputTextTitle")}`,
-               "content": `${formData.get("annotationContentP")}`,
-               "timeOfCreation": `${createDate}`,
-               "timeOFEdit": `${createDate}`,
-               "book":`${currBookID}`,
+          let annObj;
+          if (editAnnID) {
+               annObj = {
+                    ...oldAnn,
+                    "title": `${formData.get("inputTextTitle")}`,
+                    "content": `${formData.get("annotationContentP")}`,
+                    "timeOFEdit": `${createDate}`
+               };
 
-          };
-          // post annObj
-          annotationPostRequest(annObj);
+               annotationEditRequest(editAnnID, annObj);//oldAnnObj/updatedAnn obj
+          }
+          else {
+               annObj = {
+                    "title": `${formData.get("inputTextTitle")}`,
+                    "content": `${formData.get("annotationContentP")}`,
+                    "timeOfCreation": `${createDate}`,
+                    "timeOFEdit": `${createDate}`,
+                    "book": `${currBookID}`
+               };
+
+               annotationPostRequest(annObj);
+          }
+          // close Form modal after save btn clicked
+          formContainer.remove();
+
      })
-
-
 
      form.append(titleP, inputTextTitle, annotationContentP, textArea, saveBtn);
 
@@ -97,12 +129,6 @@ function openFormModal(currBookID) {
 
      let bodyHTML = document.getElementsByTagName("body")[0];
      bodyHTML.append(formContainer);
-
-
-
-
-
-
 
 }
 

@@ -85,17 +85,16 @@
 
      <div id="wrapper">
           <div id="pagination-container">
-               <div>Results: <span id="resultNum">1</span></div>
+               <div>Results: <span id="resultNum">0</span></div>
                <div>Page:
                     <button id="prevPage">&lt;</button>
                     <span id="pageNum" data-index='0'>1</span>
                     <button id="nextPage">&gt;</button>
                </div>
-               <button id="test">TEST JON SERVER</button>
           </div>
 
           <div class="cards-container">
-               <div class="card">
+              <!--<div class="card">
                     <img class="card-img" src="https://images-na.ssl-images-amazon.com/images/I/91w+VNB7wwL.jpg"
                          alt="Card image cap">
                     <div class="card-title-desc">
@@ -117,19 +116,19 @@
                     </ul>
                     <div class="card-buttons">
                          <button>add to favourites</button>
-                         <!-- <button>Dislike</button> -->
+                          <button>Dislike</button>
                     </div>
                     <div class="annotation-container">
                          <button class="annotation-btn" id="test">annotations</button>
                     </div>
-                    <!-- modal -->
-                    <!-- for id on modal use BOOK ID -->
+                    modal
+                    for id on modal use BOOK ID 
                     <div class="modal" id="test" style="visibility: visible;">
-                         <!-- button to add new annotation -->
+                         button to add new annotation 
                          <div class="add-ann-btn-container">
                               <button class="addAnnBtn">add new annotation</button>
                          </div>
-                         <!-- example how to show fetched annotations -->
+                         example how to show fetched annotations
                          <div class="modal-content-wrapper">
                               <div class="modal-content">
                                    <div class="modal-date">
@@ -146,10 +145,9 @@
                                    </div>
                               </div>      
                          </div>
-                      
                     </div>
-                       <!-- annotation form - modal -->
-                       <!-- <div class="ann-form-container">
+                       annotation form - modal 
+                       <div class="ann-form-container">
                          <div class="close-modal-form">
                               <h1 >X</h1>
                          </div>
@@ -165,7 +163,7 @@
                </div>
 
                <!-- fetching data  from GOOGLE book API-->
-
+               
           </div>
 
 
@@ -196,10 +194,10 @@
 
 
      <!-- functions -->
+     <script src="scripts/hashRouter.js"></script>
      <script src="scripts/JSONserverRequests.js"></script>
      <script src="scripts/favourites_functions.js"></script>
      <script src="scripts/annotations_functions.js"></script>
-     <script src="scripts/hashRouter.js"></script>
      <script src="scripts/GoogleAPI_functions.js"></script>
 </body>
 

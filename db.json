@@ -1,31 +1,159 @@
 {
   "annotations": [
     {
-      "id": "1",
-      "book": "Bm8Z3-7aAjYC",
       "title": "ann1 title",
-      "content": "ann1 content",
-      "timeOfCreation": "11:00",
-      "timeOFEdit": "12:00"
-    },
-    {
-      "id": "2",
+      "content": "ann1 content + edit 4 days later",
+      "timeOfCreation": "7/22/2022, 11:04:08 AM",
+      "timeOFEdit": "7/22/2022, 11:04:08 AM",
       "book": "Bm8Z3-7aAjYC",
-      "title": "ann2 title",
-      "content": "ann2 content",
-      "timeOfCreation": "22:00",
-      "timeOFEdit": "23:00"
+      "id": "1"
     },
     {
-      "title": "123",
+      "title": "good to know",
+      "content": "very usefull book",
+      "timeOfCreation": "7/22/2022, 10:23:00 AM",
+      "timeOFEdit": "7/22/2022, 10:23:00 AM",
+      "book": "kmTEDQAAQBAJ",
+      "id": "M2O3V0h"
+    },
+    {
+      "title": "sss",
       "content": "123",
-      "timeOfCreation": "7/21/2022, 10:10:05 PM",
-      "timeOFEdit": "7/21/2022, 10:10:05 PM",
+      "timeOfCreation": "7/22/2022, 10:23:39 AM",
+      "timeOFEdit": "7/22/2022, 10:23:39 AM",
       "book": "fgI3DwAAQBAJ",
-      "id": "TiMJPFU"
+      "id": "ULro1ce"
+    },
+    {
+      "title": "111",
+      "content": "111",
+      "timeOfCreation": "7/22/2022, 11:19:11 AM",
+      "timeOFEdit": "7/22/2022, 11:19:11 AM",
+      "book": "g-PbDwAAQBAJ",
+      "id": "9TCSk0L"
+    },
+    {
+      "title": "333+",
+      "content": "333+",
+      "timeOfCreation": "7/22/2022, 11:19:22 AM",
+      "timeOFEdit": "7/22/2022, 11:21:06 AM",
+      "book": "g-PbDwAAQBAJ",
+      "id": "OD922vX"
+    },
+    {
+      "title": "1231",
+      "content": "23",
+      "timeOfCreation": "7/22/2022, 7:41:07 PM",
+      "timeOFEdit": "7/22/2022, 7:41:07 PM",
+      "book": "-6eSIgcAuN4C",
+      "id": "Z5qP0Kd"
+    },
+    {
+      "title": "ssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss",
+      "content": "annotationsWrapperARRannotationsWrapperARRannotationsWrapperARRannotationsWrapperARRannotationsWrapperARRannotationsWrapperARRannotationsWrapperARRannotationsWrapperARRannotationsWrapperARRannotationsWrapperARRannotationsWrapperARRannotationsWrapperARRannotationsWrapperARRannotationsWrapperARRannotationsWrapperARRannotationsWrapperARRannotationsWrapperARRannotationsWrapperARRannotationsWrapperARRannotationsWrapperARRannotationsWrapperARRannotationsWrapperARRannotationsWrapperARRannotationsWrapperARRannotationsWrapperARRannotationsWrapperARRannotationsWrapperARRannotationsWrapperARRannotationsWrapperARRannotationsWrapperARRannotationsWrapperARRannotationsWrapperARRannotationsWrapperARRannotationsWrapperARRannotationsWrapperARRannotationsWrapperARR",
+      "timeOfCreation": "7/22/2022, 11:20:33 PM",
+      "timeOFEdit": "7/22/2022, 11:20:33 PM",
+      "book": "-6eSIgcAuN4C",
+      "id": "xL2m_dA"
+    },
+    {
+      "title": "444",
+      "content": "444",
+      "timeOfCreation": "7/22/2022, 11:23:12 PM",
+      "timeOFEdit": "7/22/2022, 11:23:12 PM",
+      "book": "-6eSIgcAuN4C",
+      "id": "YX3zaIP"
+    },
+    {
+      "title": "blqblq",
+      "content": "blq blq blq ",
+      "timeOfCreation": "7/23/2022, 12:05:09 PM",
+      "timeOFEdit": "7/23/2022, 12:05:09 PM",
+      "book": "a1Z8DwAAQBAJ",
+      "id": "8vmpFUv"
+    },
+    {
+      "title": "333",
+      "content": "22",
+      "timeOfCreation": "7/23/2022, 6:51:21 PM",
+      "timeOFEdit": "7/23/2022, 6:55:44 PM",
+      "book": "T7-bDwAAQBAJ",
+      "id": "Mnh094g"
+    },
+    {
+      "title": "444",
+      "content": "444",
+      "timeOfCreation": "7/23/2022, 6:55:48 PM",
+      "timeOFEdit": "7/23/2022, 6:55:48 PM",
+      "book": "T7-bDwAAQBAJ",
+      "id": "GG-Oj0i"
+    },
+    {
+      "title": "new ",
+      "content": "213",
+      "timeOfCreation": "7/23/2022, 6:57:04 PM",
+      "timeOFEdit": "7/23/2022, 6:57:04 PM",
+      "book": "T7-bDwAAQBAJ",
+      "id": "FGj0IJi"
+    },
+    {
+      "title": "new 2",
+      "content": "13",
+      "timeOfCreation": "7/23/2022, 7:20:37 PM",
+      "timeOFEdit": "7/23/2022, 7:20:47 PM",
+      "book": "Bm8Z3-7aAjYC",
+      "id": "RzV9lQO"
     }
   ],
   "favourites": [
+    {
+      "id": "6uncBAAAQBAJ",
+      "volumeInfo": {
+        "title": "DIY Dog Grooming, From Puppy Cuts to Best in Show",
+        "imageLinks": {
+          "thumbnail": "http://books.google.com/books/content?id=6uncBAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+        },
+        "description": "Master dog groomer to the stars Jorge Bendersky bathes, brushes, trims and pampers some pretty important pooches. Nevertheless, the fundamental skills and techniques he uses every day in his Manhattan salon can and should be in every dog owner's repertoire. From breed identification to tool selection, clipping to scissoring, Bendersky shares, in his unmistakably playful way, the tricks of his trade, ensuring your canine companion will never again suffer a bad hair day.",
+        "authors": "author: Jorge Bendersky",
+        "publishedDate": "year: 2014"
+      }
+    },
+    {
+      "id": "tQXWwAEACAAJ",
+      "volumeInfo": {
+        "title": "The Complete Book of Dog Breeding",
+        "imageLinks": {
+          "thumbnail": "http://books.google.com/books/content?id=tQXWwAEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+        },
+        "description": "A veterinarian with many years of canine practice experience offers guidance to novice and professional dog breeders, emphasizing the responsibilities of reputable breeders to their dogs and to the buyers of the puppies they produce. Topics covered range from the choosing and conditioning of brood stock to the socializing of puppies and the establishment of pedigrees, registration, titles, and much more.",
+        "authors": "author: Dan Rice",
+        "publishedDate": "year: 2008"
+      }
+    },
+    {
+      "id": "0P5TtgEACAAJ",
+      "volumeInfo": {
+        "title": "Do You Look Like Your Dog?",
+        "imageLinks": {
+          "thumbnail": "http://books.google.com/books/content?id=0P5TtgEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+        },
+        "description": "Pair up the dogs with their owners in this hilarious card game. 50 cards depict fun photographs of the dogs and owners, and humorous texts are included in the booklet to provide clues about 25 people and their furry best friends. Why DO people look like their dogs? Is it shared personality traits, barely suppressed narcissistic tendencies, or do they grow together over time like old married couples? This game explores the intense bonds we develop with our dogs, which are far from only skin, or even fur, deep. Play as a memory game with the cards face down for added entertainment. Collect the most pairs to win! This is the perfect gift for dog lovers.",
+        "authors": "author: -",
+        "publishedDate": "year: 2018"
+      }
+    },
+    {
+      "id": "XiU1rgEACAAJ",
+      "volumeInfo": {
+        "title": "Clinical Medicine of the Dog and Cat, Third Edition",
+        "imageLinks": {
+          "thumbnail": "http://books.google.com/books/content?id=XiU1rgEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+        },
+        "description": "Prior to publication of the first edition of Clinical Medicine of the Dog and Cat, no other comprehensive small animal veterinary medicine book existed with a comparable amount of relevant illustrated material. This new third edition continues and expands on the revolutionary approach of the previous two editions, now including more than 1,850 highly valuable clinical colour photographs, diagrams, and tables. The third edition of this book has been completely revised and updated. The book is now divided into five color-coded sections - General Approach, Disease of Specific Organ Systems, Multisystemic Disorders, Elements of Therapy and Case Studies. As with the first and second editions of this book the overriding principle of succinct, yet comprehensive text presented in a clear format with an abundance of good quality images remains. Section I: General Approach is completely new and covers medical history and client communication, and common clinical problems. Section II: Specific Organ Systems is organized by body system with chapters structured in a systematic manner that include the definition for each disorder, its causes, clinical features, differential diagnoses, diagnostic methodology, treatment and prognosis, providing readers with easy access to important clinical information. New to this section are chapters covering diseases of the oral cavity and teeth, approach to thoracic radiographs, approach to abdominal radiographs, and disorders of hemostasis. Section III: Multisystemic Disorders coversrevised and updated chapters includingclinical toxicology, infectious diseases, and immunologic disorders. Section IV: Elements of Therapy covers therapies such as fluid therapy, pain management, nutrition of the critically ill dog and cat and a new chapter on management of the obese dog or cat. Section V: Case Studies includes over 25 case studies that enable the reader to relate the knowledge gained in the book to clinical cases seen in practice. Written by board-certified experts with several case contributions by clinicians in advanced phases of resident training, topics were carefully selected to make this a valuable resource to the general practitioner and also to small animal interns and veterinary students.",
+        "authors": "author: Michael Schaer, Frederic P. Gaschen",
+        "publishedDate": "year: 2016"
+      }
+    },
     {
       "id": "Bm8Z3-7aAjYC",
       "volumeInfo": {
@@ -39,63 +167,15 @@
       }
     },
     {
-      "id": "fgI3DwAAQBAJ",
+      "id": "T7-bDwAAQBAJ",
       "volumeInfo": {
-        "title": "Dog Training For Dummies",
+        "title": "Dog Is Love",
         "imageLinks": {
-          "thumbnail": "http://books.google.com/books/content?id=fgI3DwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+          "thumbnail": "http://books.google.com/books/content?id=T7-bDwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
         },
-        "description": "Make training fun and effective This friendly guide shows you how to select the right training method for your dog, based on his unique personality, to reach your desired goals. Whether you want to teach Buddy to sit or master retrieving, you'll get expert training tips and techniques for you and your dog — to ensure a mutually respectful relationship with your four-legged friend. Concentrate on canines — discover why your dog acts the way she does, understand her nutritional needs, and ready yourself for the task of training your dog Prep for your pup — prepare your home for your puppy's arrival, discover the importance of socialization, and get started on housetraining Put your best paw forward — teach basic commands like Sit, Stay, and Down, and get the scoop on how to deal with doggie don'ts like chewing, digging, and excessive barking Take training to the next level — get involved in organized dog activities and competitions, where you'll both show off impressive tricks like retrieving, figure 8s, and much more Open the book and find: Step-by-step instructions for teaching your dog basic commands Helpful advice on crate training Safe ways to address aggression and separation anxiety Tips for teaching Buddy to behave himself around people and other dogs Techniques to keep your senior dog feeling young Health issues that can interfere with training Experts to turn to for training help Learn to: Use positive reinforcement as an effective teaching tool Select the gear you need for training success Teach the basics including Sit, Stay, and Down Eliminate unwanted behavior",
-        "authors": "author: Jack Volhard, Wendy Volhard",
-        "publishedDate": "year: 2010"
-      }
-    },
-    {
-      "id": "kmTEDQAAQBAJ",
-      "volumeInfo": {
-        "title": "How to Toilet Train Your Cat",
-        "imageLinks": {
-          "thumbnail": "http://books.google.com/books/content?id=kmTEDQAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
-        },
-        "description": "Follow this foolproof 21-day program and you can teach any litter-trained cat to use a toilet instead of a box. Discover a better way: Now cat owners everywhere can put down their scoops, stop ferrying backbreaking sacks of litter, enjoy a fresh-smelling home, and save hundreds of dollars a year. And make their cats happier, too! The requirements are simple: magazines or newspapers, masking tape, heavy-duty plastic wrap, a supply of litter, and a cat between the ages of six months and ten years (you can train an older cat, but it may take longer). Then, 21 days later, your cat will be using the toilet, just like any other civilized member of the family. For life. Toilet training a cat isn’t just for the owner’s convenience. Many cats equate the smell of the litter box with danger, causing constant stress, and the fragrances, dyes, and disinfectants found in most litters are detrimental to your pet’s well-being. Yes, it’s true: A toilet-trained cat is a happier, healthier cat.",
-        "authors": "author: Paul Kunkel",
-        "publishedDate": "year: 2017"
-      }
-    },
-    {
-      "id": "g-PbDwAAQBAJ",
-      "volumeInfo": {
-        "title": "Think Like a Cat",
-        "imageLinks": {
-          "thumbnail": "http://books.google.com/books/content?id=g-PbDwAAQBAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"
-        },
-        "description": "America's favorite cat behavior expert, author of Catwise and Cat vs. Cat, offers the most complete resource for cat owners of all stripes, now fully updated. \"The queen of cat behavior\" - Steve Dale, author of My Pet World Think it's impossible to train a cat? Think again! By learning how to think like a cat, you'll be amazed at just how easy it is. Whether you are a veteran cat lover, a brand-new owner of a sweet kitten, or the frustrated companion of a feline whose driving you crazy, Pam Johnson-Bennett will help you understand what makes your cat tick (as well as scratch and purr). Topics range from where to get a cat to securing a vet; from basic health care to treating more serious problems; choosing an inrresistible scratching post and avoiding litterbox problems. A comprehensive guide to cat care and training, she helps you understand the instincts that guide feline behavior. Using behavior modification and play therapy techniques, she shares successful methods that will help you and your cat build a great relationship.",
-        "authors": "author: Pam Johnson-Bennett",
-        "publishedDate": "year: 2011"
-      }
-    },
-    {
-      "id": "ZH6aBAAAQBAJ",
-      "volumeInfo": {
-        "title": "The Wild Cat Book",
-        "imageLinks": {
-          "thumbnail": "http://books.google.com/books/content?id=ZH6aBAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
-        },
-        "description": "Presents information about the physical features, behavior, habitats, and geographical distribution of wild and feral cats throughout the world, and the dangers they face from humans and changes to their environment.",
-        "authors": "author: Fiona Sunquist, Mel Sunquist",
-        "publishedDate": "year: 2014"
-      }
-    },
-    {
-      "id": "5UwjDQAAQBAJ",
-      "volumeInfo": {
-        "title": "Call of the Cats",
-        "imageLinks": {
-          "thumbnail": "http://books.google.com/books/content?id=5UwjDQAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
-        },
-        "description": "When aspiring screenwriter Andrew Bloomfield moved into a bungalow in Southern California he soon discovered that he shared the property with a large colony of feral cats — untamed, uninterested in human touch, not purring pets in waiting. But after a midnight attack by predators that decimated yet another litter of kittens, Bloomfield decided to intervene. He began to name and nurse, feed and house, rescue and neuter. Drawing on his time living in Asia among spiritual teachers, he takes us on the contemplative, humorous, and poignant journey of saving these cats, only to find it was they who saved him by revealing a world of meaning beyond his unrealized Hollywood dreams.",
-        "authors": "author: Andrew Bloomfield",
-        "publishedDate": "year: 2016"
+        "description": "A pioneering canine behaviorist draws on cutting-edge research to show that a single, simple trait--the capacity to love--is what makes dogs such perfect companions for humans, and to explain how we can better reciprocate their affection.",
+        "authors": "author: Clive D. L. Wynne",
+        "publishedDate": "year: 2019"
       }
     }
   ]

@@ -74,7 +74,7 @@ function fetchData() {
      }
 
      // 3 fetch data
-     fetch(`https://www.googleapis.com/books/v1/volumes?q=${qParam}:${inputText}&printType=books&startIndex=${pageNum.dataset.index}&maxResults=3`)
+     fetch(`https://www.googleapis.com/books/v1/volumes?q=${qParam}:${inputText}&printType=books&startIndex=${pageNum.dataset.index}&maxResults=10`)
           .then(res => res.json())
           .then(data => {
                console.log(data);
@@ -97,10 +97,8 @@ function fetchData() {
                loader.remove();
           })
           .then(() => {
-               // add modal to all cards
-               console.log("addding modal toggle");
-               addToggleModaltoAllCards();
-               favButtonAddListener();
+               // on each page - diabled already added to fav Cards buttons
+               checkCardButton();
           })
 
 
@@ -165,7 +163,15 @@ function createAppendCard(currBook, page) {
      let cardUl = document.createElement("ul");
      cardUl.className = "card-author-year";
      let cardYear = document.createElement("li");
-     cardYear.innerText = "year: " + (year ? year.slice(0, 4).trim() : "-");
+     debugger; 
+     // nedd check for with page are the cards
+     if(page.className=="cards-container-fav"){
+          cardYear.innerText = ("year: " + (year ? year.slice(5).trim() : "-"));
+     }
+     else{
+          cardYear.innerText = ("year: " + (year ? year.slice(0,4).trim() : "-"));
+     }
+
      cardYear.id = "year" + bookID;
      let cardAuthor = document.createElement("li");
      cardAuthor.innerText = "author: " + (authors ? authors.trim() : "-");
@@ -175,19 +181,50 @@ function createAppendCard(currBook, page) {
      let cardButtonsContainer = document.createElement("div");
      cardButtonsContainer.className = "card-buttons";
      let cardButton = document.createElement("button");
-     if (page.className == "cards-container") {
-          cardButton.className = "cardFavBtn";
-          cardButton.innerText = "add to Fav";
-          cardButton.id = "favButton" + bookID;
-     }
-     else {
+
+     // if (page.className == "cards-container") {
+     // check if book is already in favourites
+     // REMOVE button in fav page
+     if (page.className =="cards-container-fav") {
           cardButton.className = "cardRemoveBtn";
           cardButton.innerText = "Remove";
           cardButton.id = "removeButton" + bookID;
-     }
+          cardButton.addEventListener("click",function(){
+               deleteRequest(`${bookID}`);
+               let parent = document.getElementById(`cardContainer${(bookID)}`);
+               parent.remove();
+          })
 
-     // let cardLink2 = document.createElement("button");
-     // cardLink2.innerText = "Dislike";
+     }
+     // add to fav button in home page
+     else {
+          cardButton.className = "cardFavBtn";
+          cardButton.innerText = "add to Fav";
+          cardButton.id = "favButton" + bookID;
+
+          cardButton.addEventListener("click",function(){
+               let bookObjID = bookID;
+               let title = document.getElementById(`title${bookID}`).innerText;
+               let imageSrc = document.getElementById(`img${bookID}`).src;
+               let description = document.getElementById(`description${bookID}`).innerText;
+               let authors = document.getElementById(`author${bookID}`).innerText;
+               let publishedDate = document.getElementById(`year${bookID}`).innerText;
+
+               let bookObj = {
+                    id: bookObjID,
+                    volumeInfo: {
+                         title,
+                         imageLinks: {
+                              thumbnail: imageSrc,
+                         },
+                         description,
+                         authors,
+                         publishedDate
+                    }
+               }
+               postRequest(bookObj);
+          })
+     }
 
      cardButtonsContainer.append(cardButton);
 
@@ -200,10 +237,12 @@ function createAppendCard(currBook, page) {
      annotationBtn.id = "annButton" + bookID; // a + id , because some id's start with number
      annotationContainer.append(annotationBtn);
 
+
      // 0 add modal container for showing annotations
      let modalContainer = document.createElement("div");
      modalContainer.className = "modal";
      modalContainer.id = "modal" + bookID;
+     modalContainer.style.visibility = "hidden";
 
      // add new annotation btn
      let addAnnBtnContainer = document.createElement("div");
@@ -214,10 +253,29 @@ function createAppendCard(currBook, page) {
      addNewAnnotationBtn.id = `addAnnotation${bookID}`;
      addAnnBtnContainer.append(addNewAnnotationBtn);
 
+     // add toggle function to ann button - test fix
+     annotationBtn.addEventListener("click", function () {
+          if (modalContainer.style.visibility == "hidden") {
+               modalContainer.style.visibility = "visible";
+               annotationsWrapper.innerHTML = "";
+               annotationGetRequest(bookID);
+          }
+          else {
+               modalContainer.style.visibility = "hidden";
+          }
+     })
+     // add function to "ADD NEW ANNOTATION" button
+     addNewAnnotationBtn.addEventListener("click", function () {
+          createNewAnnotation(bookID);
+     })
+
+
      // adding 1- "add annutations wrapper"
      let annotationsWrapper = document.createElement("div");
      annotationsWrapper.className = "modal-content-wrapper";
      annotationsWrapper.id = `annotationsWrapper${bookID}`;
+     // second classlist just for itarating in printing annotations
+     annotationsWrapper.classList.add(`annotationsWrapper${bookID}`)
 
      modalContainer.append(addAnnBtnContainer, annotationsWrapper);
 
@@ -226,6 +284,8 @@ function createAppendCard(currBook, page) {
      cardContainer.append(cardImg, cardBodyDesc, cardUl, cardButtonsContainer, annotationContainer, modalContainer)
 
      page.append(cardContainer)
+
+
 }
 
 
