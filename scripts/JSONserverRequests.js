@@ -224,7 +224,7 @@ function annotationGetRequest(bookID) {
 
           modalContent.append(modalDateBox, modalTextBox)
 
-
+          // !!! *USE CLONENODE to have card in favpage an homepage in the same time
           let annotationsWrapper = document.getElementsByClassName(`annotationsWrapper${currAnnObj.book}`);
           // !!! FIX working with cloneNode-> to show in favPage and home the same annotations in the same time
           for (let i = 0; i < annotationsWrapper.length; i++) {

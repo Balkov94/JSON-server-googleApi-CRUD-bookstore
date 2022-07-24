@@ -59,12 +59,17 @@ function openFormModal(currBookID, editAnnID) {
      let inputTextTitle = document.createElement("input");
      inputTextTitle.type = "text";
      inputTextTitle.name = "inputTextTitle";
+     // input additional validation properties
+     inputTextTitle.maxLength = 40;
+     inputTextTitle.required = true;
+     inputTextTitle.autocomplete = "off";
      let annotationContentP = document.createElement("p");
      annotationContentP.innerText = "annotation content:";
      let textArea = document.createElement("textarea");
      textArea.name = "annotationContentP";
      textArea.cols = "30";
      textArea.rows = "10";
+     textArea.maxLength = 256;
      let saveBtn = document.createElement("button");
      saveBtn.innerText = "save";
      saveBtn.className = "ann-form-btn";
@@ -91,9 +96,39 @@ function openFormModal(currBookID, editAnnID) {
                     console.log(err.message);
                })
      }
-
+     // save btn is diable if inputs are incorrect
+     inputTextTitle.addEventListener("input", function () {
+          if (inputTextTitle.value.length > 2 && textArea.value.length>2) {
+               saveBtn.disabled = false;
+               saveBtn.style.opacity = 1;
+          }
+          else{
+               saveBtn.disabled = true;
+               saveBtn.style.opacity = 0.5;
+          }
+     })
+     textArea.addEventListener("input", function () {
+          if (inputTextTitle.value.length > 2 && textArea.value.length>2) {
+               saveBtn.disabled = false;
+               saveBtn.style.opacity = 1;
+          }
+          else{
+               saveBtn.disabled = true;
+               saveBtn.style.opacity = 0.5;
+          }
+     })
+     if(inputTextTitle.value.length < 2){
+          saveBtn.disabled = true;
+          saveBtn.style.opacity = 0.5;
+     }
+     // _____________________________________________
      saveBtn.addEventListener("click", function (event) {
           event.preventDefault();
+          // validating input values
+          if(inputTextTitle.value.trim().length<2 || textArea.value.trim().length<2){
+               alert("************************************************\n Fill out the form properly! (min 3 chars in field)")
+               return;
+          }
           const formData = new FormData(form);
           let createDate = new Date().toLocaleString();//7/21/2022, 3:14:53 PM good format
           let annObj;
@@ -118,6 +153,7 @@ function openFormModal(currBookID, editAnnID) {
 
                annotationPostRequest(annObj);
           }
+          
           // close Form modal after save btn clicked
           formContainer.remove();
 
