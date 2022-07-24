@@ -15,7 +15,12 @@ function hashChangeHandler() {
                wrapper.style.display = "flex";
                searchContainer.style.display = "block"
                favDiv.style.display = "none";  
-               checkCardButton(); //in home cards are not each time fatched
+               try{
+                    checkCardButton(); //in home cards are not each time fatched
+
+               }catch(error){
+                    console.log(error);
+               }
                closeAllModalsinPageSwitch();
                break;
           case "Favourites":

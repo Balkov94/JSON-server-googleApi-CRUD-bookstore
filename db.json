@@ -1,133 +1,125 @@
 {
   "annotations": [
     {
-      "title": "ann1 title",
-      "content": "ann1 content + edit 4 days later",
-      "timeOfCreation": "7/22/2022, 11:04:08 AM",
-      "timeOFEdit": "7/22/2022, 11:04:08 AM",
+      "title": "444",
+      "content": "4",
+      "timeOfCreation": "7/24/2022, 4:45:48 PM",
+      "timeOFEdit": "7/24/2022, 4:46:09 PM",
       "book": "Bm8Z3-7aAjYC",
-      "id": "1"
+      "id": 1
     },
     {
-      "title": "good to know",
-      "content": "very usefull book",
-      "timeOfCreation": "7/22/2022, 10:23:00 AM",
-      "timeOFEdit": "7/22/2022, 10:23:00 AM",
-      "book": "kmTEDQAAQBAJ",
-      "id": "M2O3V0h"
+      "title": "222",
+      "content": "222",
+      "timeOfCreation": "7/24/2022, 4:45:55 PM",
+      "timeOFEdit": "7/24/2022, 4:45:55 PM",
+      "book": "Bm8Z3-7aAjYC",
+      "id": 2
     },
     {
-      "title": "sss",
-      "content": "123",
-      "timeOfCreation": "7/22/2022, 10:23:39 AM",
-      "timeOFEdit": "7/22/2022, 10:23:39 AM",
+      "title": "Very useful reading",
+      "content": "This book change my life.",
+      "timeOfCreation": "7/24/2022, 5:02:46 PM",
+      "timeOFEdit": "7/24/2022, 5:02:46 PM",
       "book": "fgI3DwAAQBAJ",
-      "id": "ULro1ce"
+      "id": 3
     },
     {
-      "title": "111",
-      "content": "111",
-      "timeOfCreation": "7/22/2022, 11:19:11 AM",
-      "timeOFEdit": "7/22/2022, 11:19:11 AM",
-      "book": "g-PbDwAAQBAJ",
-      "id": "9TCSk0L"
-    },
-    {
-      "title": "333+",
-      "content": "333+",
-      "timeOfCreation": "7/22/2022, 11:19:22 AM",
-      "timeOFEdit": "7/22/2022, 11:21:06 AM",
-      "book": "g-PbDwAAQBAJ",
-      "id": "OD922vX"
-    },
-    {
-      "title": "1231",
-      "content": "23",
-      "timeOfCreation": "7/22/2022, 7:41:07 PM",
-      "timeOFEdit": "7/22/2022, 7:41:07 PM",
-      "book": "-6eSIgcAuN4C",
-      "id": "Z5qP0Kd"
-    },
-    {
-      "title": "ssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss",
-      "content": "annotationsWrapperARRannotationsWrapperARRannotationsWrapperARRannotationsWrapperARRannotationsWrapperARRannotationsWrapperARRannotationsWrapperARRannotationsWrapperARRannotationsWrapperARRannotationsWrapperARRannotationsWrapperARRannotationsWrapperARRannotationsWrapperARRannotationsWrapperARRannotationsWrapperARRannotationsWrapperARRannotationsWrapperARRannotationsWrapperARRannotationsWrapperARRannotationsWrapperARRannotationsWrapperARRannotationsWrapperARRannotationsWrapperARRannotationsWrapperARRannotationsWrapperARRannotationsWrapperARRannotationsWrapperARRannotationsWrapperARRannotationsWrapperARRannotationsWrapperARRannotationsWrapperARRannotationsWrapperARRannotationsWrapperARRannotationsWrapperARRannotationsWrapperARRannotationsWrapperARR",
-      "timeOfCreation": "7/22/2022, 11:20:33 PM",
-      "timeOFEdit": "7/22/2022, 11:20:33 PM",
-      "book": "-6eSIgcAuN4C",
-      "id": "xL2m_dA"
-    },
-    {
-      "title": "444",
-      "content": "444",
-      "timeOfCreation": "7/22/2022, 11:23:12 PM",
-      "timeOFEdit": "7/22/2022, 11:23:12 PM",
-      "book": "-6eSIgcAuN4C",
-      "id": "YX3zaIP"
-    },
-    {
-      "title": "blqblq",
-      "content": "blq blq blq ",
-      "timeOfCreation": "7/23/2022, 12:05:09 PM",
-      "timeOFEdit": "7/23/2022, 12:05:09 PM",
-      "book": "a1Z8DwAAQBAJ",
-      "id": "8vmpFUv"
-    },
-    {
-      "title": "333",
-      "content": "22",
-      "timeOfCreation": "7/23/2022, 6:51:21 PM",
-      "timeOFEdit": "7/23/2022, 6:55:44 PM",
+      "title": "Love it",
+      "content": "Gread book!",
+      "timeOfCreation": "7/24/2022, 5:03:20 PM",
+      "timeOFEdit": "7/24/2022, 5:03:20 PM",
       "book": "T7-bDwAAQBAJ",
-      "id": "Mnh094g"
+      "id": 4
     },
     {
-      "title": "444",
-      "content": "444",
-      "timeOfCreation": "7/23/2022, 6:55:48 PM",
-      "timeOFEdit": "7/23/2022, 6:55:48 PM",
+      "title": "I recommend it",
+      "content": "<3",
+      "timeOfCreation": "7/24/2022, 5:04:17 PM",
+      "timeOFEdit": "7/24/2022, 5:04:17 PM",
       "book": "T7-bDwAAQBAJ",
-      "id": "GG-Oj0i"
+      "id": 5
     },
     {
-      "title": "new ",
-      "content": "213",
-      "timeOfCreation": "7/23/2022, 6:57:04 PM",
-      "timeOFEdit": "7/23/2022, 6:57:04 PM",
-      "book": "T7-bDwAAQBAJ",
-      "id": "FGj0IJi"
+      "title": "True story",
+      "content": "true story ...",
+      "timeOfCreation": "7/24/2022, 5:06:35 PM",
+      "timeOFEdit": "7/24/2022, 5:06:35 PM",
+      "book": "0P5TtgEACAAJ",
+      "id": 6
     },
     {
-      "title": "new 2",
-      "content": "13",
-      "timeOfCreation": "7/23/2022, 7:20:37 PM",
-      "timeOFEdit": "7/23/2022, 7:20:47 PM",
-      "book": "Bm8Z3-7aAjYC",
-      "id": "RzV9lQO"
+      "title": "Love it",
+      "content": "Now I love the DEAD cats more than the OTHERS. :D",
+      "timeOfCreation": "7/24/2022, 5:12:26 PM",
+      "timeOFEdit": "7/24/2022, 5:25:49 PM",
+      "book": "ZXa-wB-A7woC",
+      "id": 7
+    },
+    {
+      "title": "This changed my kitty's life",
+      "content": "This changed my kitty's life for better!",
+      "timeOfCreation": "7/24/2022, 5:13:59 PM",
+      "timeOFEdit": "7/24/2022, 5:13:59 PM",
+      "book": "kmTEDQAAQBAJ",
+      "id": 8
+    },
+    {
+      "title": "got some Q",
+      "content": "Who should be dummy, the dog or I?",
+      "timeOfCreation": "7/24/2022, 5:15:53 PM",
+      "timeOFEdit": "7/24/2022, 5:16:40 PM",
+      "book": "fgI3DwAAQBAJ",
+      "id": 9
+    },
+    {
+      "title": "Really important topic",
+      "content": "Can I use it for little honey badgers???",
+      "timeOfCreation": "7/24/2022, 5:20:24 PM",
+      "timeOFEdit": "7/24/2022, 5:35:43 PM",
+      "book": "kmTEDQAAQBAJ",
+      "id": 10
+    },
+    {
+      "title": "Not bad, not bad",
+      "content": "Pussy Riot and Green peace like it.",
+      "timeOfCreation": "7/24/2022, 5:22:58 PM",
+      "timeOFEdit": "7/24/2022, 5:22:58 PM",
+      "book": "ZXa-wB-A7woC",
+      "id": 11
+    },
+    {
+      "title": "The loved book of each feminist",
+      "content": "Xo xo xo",
+      "timeOfCreation": "7/24/2022, 5:28:21 PM",
+      "timeOFEdit": "7/24/2022, 5:28:21 PM",
+      "book": "Zt46lQEACAAJ",
+      "id": 12
     }
   ],
   "favourites": [
     {
-      "id": "6uncBAAAQBAJ",
+      "id": "T7-bDwAAQBAJ",
       "volumeInfo": {
-        "title": "DIY Dog Grooming, From Puppy Cuts to Best in Show",
+        "title": "Dog Is Love",
         "imageLinks": {
-          "thumbnail": "http://books.google.com/books/content?id=6uncBAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+          "thumbnail": "http://books.google.com/books/content?id=T7-bDwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
         },
-        "description": "Master dog groomer to the stars Jorge Bendersky bathes, brushes, trims and pampers some pretty important pooches. Nevertheless, the fundamental skills and techniques he uses every day in his Manhattan salon can and should be in every dog owner's repertoire. From breed identification to tool selection, clipping to scissoring, Bendersky shares, in his unmistakably playful way, the tricks of his trade, ensuring your canine companion will never again suffer a bad hair day.",
-        "authors": "author: Jorge Bendersky",
-        "publishedDate": "year: 2014"
+        "description": "A pioneering canine behaviorist draws on cutting-edge research to show that a single, simple trait--the capacity to love--is what makes dogs such perfect companions for humans, and to explain how we can better reciprocate their affection.",
+        "authors": "author: Clive D. L. Wynne",
+        "publishedDate": "year: 2019"
       }
     },
     {
-      "id": "tQXWwAEACAAJ",
+      "id": "fgI3DwAAQBAJ",
       "volumeInfo": {
-        "title": "The Complete Book of Dog Breeding",
+        "title": "Dog Training For Dummies",
         "imageLinks": {
-          "thumbnail": "http://books.google.com/books/content?id=tQXWwAEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+          "thumbnail": "http://books.google.com/books/content?id=fgI3DwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
         },
-        "description": "A veterinarian with many years of canine practice experience offers guidance to novice and professional dog breeders, emphasizing the responsibilities of reputable breeders to their dogs and to the buyers of the puppies they produce. Topics covered range from the choosing and conditioning of brood stock to the socializing of puppies and the establishment of pedigrees, registration, titles, and much more.",
-        "authors": "author: Dan Rice",
-        "publishedDate": "year: 2008"
+        "description": "Make training fun and effective This friendly guide shows you how to select the right training method for your dog, based on his unique personality, to reach your desired goals. Whether you want to teach Buddy to sit or master retrieving, you'll get expert training tips and techniques for you and your dog — to ensure a mutually respectful relationship with your four-legged friend. Concentrate on canines — discover why your dog acts the way she does, understand her nutritional needs, and ready yourself for the task of training your dog Prep for your pup — prepare your home for your puppy's arrival, discover the importance of socialization, and get started on housetraining Put your best paw forward — teach basic commands like Sit, Stay, and Down, and get the scoop on how to deal with doggie don'ts like chewing, digging, and excessive barking Take training to the next level — get involved in organized dog activities and competitions, where you'll both show off impressive tricks like retrieving, figure 8s, and much more Open the book and find: Step-by-step instructions for teaching your dog basic commands Helpful advice on crate training Safe ways to address aggression and separation anxiety Tips for teaching Buddy to behave himself around people and other dogs Techniques to keep your senior dog feeling young Health issues that can interfere with training Experts to turn to for training help Learn to: Use positive reinforcement as an effective teaching tool Select the gear you need for training success Teach the basics including Sit, Stay, and Down Eliminate unwanted behavior",
+        "authors": "author: Jack Volhard, Wendy Volhard",
+        "publishedDate": "year: 2010"
       }
     },
     {
@@ -143,39 +135,39 @@
       }
     },
     {
-      "id": "XiU1rgEACAAJ",
+      "id": "ZXa-wB-A7woC",
       "volumeInfo": {
-        "title": "Clinical Medicine of the Dog and Cat, Third Edition",
+        "title": "101 Uses for a Dead Cat",
         "imageLinks": {
-          "thumbnail": "http://books.google.com/books/content?id=XiU1rgEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+          "thumbnail": "http://books.google.com/books/content?id=ZXa-wB-A7woC&printsec=frontcover&img=1&zoom=1&source=gbs_api"
         },
-        "description": "Prior to publication of the first edition of Clinical Medicine of the Dog and Cat, no other comprehensive small animal veterinary medicine book existed with a comparable amount of relevant illustrated material. This new third edition continues and expands on the revolutionary approach of the previous two editions, now including more than 1,850 highly valuable clinical colour photographs, diagrams, and tables. The third edition of this book has been completely revised and updated. The book is now divided into five color-coded sections - General Approach, Disease of Specific Organ Systems, Multisystemic Disorders, Elements of Therapy and Case Studies. As with the first and second editions of this book the overriding principle of succinct, yet comprehensive text presented in a clear format with an abundance of good quality images remains. Section I: General Approach is completely new and covers medical history and client communication, and common clinical problems. Section II: Specific Organ Systems is organized by body system with chapters structured in a systematic manner that include the definition for each disorder, its causes, clinical features, differential diagnoses, diagnostic methodology, treatment and prognosis, providing readers with easy access to important clinical information. New to this section are chapters covering diseases of the oral cavity and teeth, approach to thoracic radiographs, approach to abdominal radiographs, and disorders of hemostasis. Section III: Multisystemic Disorders coversrevised and updated chapters includingclinical toxicology, infectious diseases, and immunologic disorders. Section IV: Elements of Therapy covers therapies such as fluid therapy, pain management, nutrition of the critically ill dog and cat and a new chapter on management of the obese dog or cat. Section V: Case Studies includes over 25 case studies that enable the reader to relate the knowledge gained in the book to clinical cases seen in practice. Written by board-certified experts with several case contributions by clinicians in advanced phases of resident training, topics were carefully selected to make this a valuable resource to the general practitioner and also to small animal interns and veterinary students.",
-        "authors": "author: Michael Schaer, Frederic P. Gaschen",
-        "publishedDate": "year: 2016"
+        "description": "Darkly humorous cartoons show a variety of facetious uses for a deceased pet",
+        "authors": "author: Simon Bond",
+        "publishedDate": "year: 1981"
       }
     },
     {
-      "id": "Bm8Z3-7aAjYC",
+      "id": "kmTEDQAAQBAJ",
       "volumeInfo": {
-        "title": "An Eye for a Dog",
+        "title": "How to Toilet Train Your Cat",
         "imageLinks": {
-          "thumbnail": "http://books.google.com/books/content?id=Bm8Z3-7aAjYC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+          "thumbnail": "http://books.google.com/books/content?id=kmTEDQAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
         },
-        "description": "Develop your \"eye\" for sound movement and structure whether you are serious about purebred dogs or are an enthusiast. Learn how color, marking, size and leash position affect the look of the dog. Over 100 judging scenarios that test your eye.",
-        "authors": "author: Robert W. Cole",
-        "publishedDate": "year: 2004"
+        "description": "Follow this foolproof 21-day program and you can teach any litter-trained cat to use a toilet instead of a box. Discover a better way: Now cat owners everywhere can put down their scoops, stop ferrying backbreaking sacks of litter, enjoy a fresh-smelling home, and save hundreds of dollars a year. And make their cats happier, too! The requirements are simple: magazines or newspapers, masking tape, heavy-duty plastic wrap, a supply of litter, and a cat between the ages of six months and ten years (you can train an older cat, but it may take longer). Then, 21 days later, your cat will be using the toilet, just like any other civilized member of the family. For life. Toilet training a cat isn’t just for the owner’s convenience. Many cats equate the smell of the litter box with danger, causing constant stress, and the fragrances, dyes, and disinfectants found in most litters are detrimental to your pet’s well-being. Yes, it’s true: A toilet-trained cat is a happier, healthier cat.",
+        "authors": "author: Paul Kunkel",
+        "publishedDate": "year: 2017"
       }
     },
     {
-      "id": "T7-bDwAAQBAJ",
+      "id": "Zt46lQEACAAJ",
       "volumeInfo": {
-        "title": "Dog Is Love",
+        "title": "Men Are Better Than Women",
         "imageLinks": {
-          "thumbnail": "http://books.google.com/books/content?id=T7-bDwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+          "thumbnail": "http://books.google.com/books/content?id=Zt46lQEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"
         },
-        "description": "A pioneering canine behaviorist draws on cutting-edge research to show that a single, simple trait--the capacity to love--is what makes dogs such perfect companions for humans, and to explain how we can better reciprocate their affection.",
-        "authors": "author: Clive D. L. Wynne",
-        "publishedDate": "year: 2019"
+        "description": "Through a process of exhaustive man research he calls \"keeping his eyes open,\" Dick Masterson has compiled a Magnum-size list of the ways men are better than women. It is an infallible compendium of man's greatness, filled with the most egregiously fallacious arguments ever put to words, but with some kind of miraculous, rock-solid man logic dripping like motor oil from every sentence. It is a manifesto more memorable than bullshit like High Fidelity or which Axe baby powder Maxim thinks you should slap on your nuts before clubbing, more chock-full of devastating man quotes than Oscar Wilde with two wangs. Most important, it is the only one of its kind. In Men Are Better Than Women, Dick Masterson dispenses logic from his man mouth into the eyes of his male readers like some kind of mighty mother man eagle with nutrient-rich word vomit. It's a book that makes you feel like driving a train into a dynamite factory and then tearing a telephone book apart with your bare hands, just because that's the way men have always done it. Masterson's chapters are simple and self-contained, demand no commitments from readers, and have an immediate payoff. Men Are Better Than Women is a dangerous work of satire -- not dangerous in a revolutionary sense, but dangerous in that it walks the razor-thin line between cruelty and absurdity. That line is called hilarious.",
+        "authors": "author: Dick Masterson",
+        "publishedDate": "year: 2008"
       }
     }
   ]

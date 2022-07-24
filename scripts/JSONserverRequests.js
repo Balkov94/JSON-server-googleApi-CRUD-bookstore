@@ -102,6 +102,7 @@ function postRequest(book) {
           })
           .catch(err => {
                // console.log(err.message);
+               console.log("Couldn't post(add) this book to favourites");
                alert(err.message)
           })
 
@@ -109,6 +110,9 @@ function postRequest(book) {
 
 function getRequest() {
      let favPage = document.getElementsByClassName("cards-container-fav")[0];
+     favPage.innerHTML = "";
+     let loader = addloader();
+     favPage.append(loader);
      fetch(`http://localhost:3000/api/favourites/`)
           .then(res => {
                if (!res.ok) {
@@ -124,9 +128,22 @@ function getRequest() {
                data.forEach(book => {
                     createAppendCard(book, favPage)
                });
+               return data;
+          })
+          .then((data) => {
+               loader.remove();
+               // add div with text empty  
+               if (data.length < 1) {
+                    let emptyContainer = document.createElement("div");
+                    emptyContainer.className = "fav-empty-container";
+                    let text = document.createElement("h1");
+                    text.innerText = "Favourites page is empty";
+                    emptyContainer.append(text);
+                    favPage.append(emptyContainer);
+               }
           })
           .catch(err => {
-               console.log("why entered here?");
+               loader.remove();
                console.log(err.message);
                console.log(err);
           })
@@ -224,7 +241,7 @@ function annotationGetRequest(bookID) {
                     // debugger;
                     annotationDeleteRequest(currAnnObj);
                     // modalContent.remove(); NOT WORKING
-                    // how problem when card is in Fav + Home
+                    // have problem when card is in Fav + Home
 
                })
 
@@ -265,7 +282,7 @@ function annotationPostRequest(newAnnObj) {
                let annotationsWrapper = document.getElementsByClassName(`annotationsWrapper${newAnnObj.book}`);
                let annotationsWrapperARR = [...annotationsWrapper]
                annotationsWrapperARR.forEach(page => page.parentElement.style.visibility = "hidden");
-               
+
                alert(`You added new annotation.`)
           })
           .catch(err => console.log(err.message))

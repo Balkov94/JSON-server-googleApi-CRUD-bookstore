@@ -4,8 +4,7 @@ let favLink = document.getElementById("favourites-link");
 let favPage = document.getElementsByClassName("cards-container-fav")[0];
 
 favLink.addEventListener("click", function () {
-     favPage.innerHTML = "";
-     getRequest(); //JSOn server get all fav Books
+     getRequest(); //JSON server get all fav Books
 
 })
 
@@ -51,6 +50,7 @@ async function favButtonAddListener() {
           function addToFavHandler() {
                // extract new book object from clicked button
                // all data has id= > nameField + bookID
+               // debugger;
                allFavBtns[i].innerText = "Remove from Fav";
                let bookObjID = bookID;
                let title = document.getElementById(`title${bookID}`).innerText;
@@ -87,23 +87,37 @@ async function favButtonAddListener() {
 
 async function checkCardButton() {
      let allFavBtns = document.getElementsByClassName("cardFavBtn");
-     let data = await fetch(`http://localhost:3000/api/favourites/`);
-     let allFavBooks = await data.json();
+     try {
+          let data = await fetch(`http://localhost:3000/api/favourites/`);
+          let allFavBooks = await data.json();
 
-     for (let i = 0; i < allFavBtns.length; i++) {
-          let currBtnID = (allFavBtns[i].id).replace("favButton", "");
+          for (let i = 0; i < allFavBtns.length; i++) {
+               let currBtnID = (allFavBtns[i].id).replace("favButton", "");
 
-          if (allFavBooks.find(book => book.id == currBtnID)) {
-               allFavBtns[i].disabled = true;
+               if (allFavBooks.find(book => book.id == currBtnID)) {
+                    allFavBtns[i].disabled = true;
+               }
+               else {
+                    allFavBtns[i].disabled = false;
+               }
           }
-          else {
-               allFavBtns[i].disabled = false;
-          }
+     } catch (error) {
+          // // console.error(error);
+          // let favPage = document.getElementsByClassName("cards-container-fav")[0];
+          // favPage.innerHTML = "";
+          // let emptyContainer = document.createElement("div");
+          // emptyContainer.className = "fav-empty-container";
+          // let text = document.createElement("h1");
+          // text.innerText = "Favourites page is empty";
+          // emptyContainer.append(text);
+          // favPage.append(emptyContainer);
+          return;
      }
 
 }
 
 function closeAllModalsinPageSwitch() {
+
      let allModalsCollection = document.getElementsByClassName("modal");
      let allModalsArr = [...allModalsCollection];
      allModalsArr.forEach(modal => modal.style.visibility = "hidden");

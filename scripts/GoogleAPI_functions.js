@@ -35,16 +35,6 @@ searchBtn.addEventListener("click", function () {
      fetchData();
 });
 
-
-function addloader() {
-     let loaderWrapper = document.createElement("div");
-     loaderWrapper.className = "loader-container";
-     let loader = document.createElement("div");
-     loader.className = "loader";
-     loaderWrapper.append(loader);
-     return loaderWrapper;
-}
-
 search.addEventListener("click", () => {
      search.value = "";
 })
@@ -109,6 +99,11 @@ function fetchData() {
           notfound.innerText = `Sorry, there isn't any valume with 
           "${inputText.replaceAll("\"", " ").trim()}" ${searchBy.value}`;
           cardsContainer.append(notfound);
+          // try add some img agter text
+          let errImg=document.createElement("img");
+          errImg.alt="Error image";
+          errImg.src="https://media0.giphy.com/media/SiMcadhDEZDm93GmTL/giphy.gif?cid=ecf05e47orkqv5ok4bpeltmux4l6n6pul7mxiglf2era8o9v&rid=giphy.gif&ct=g"
+          notfound.append(errImg);
      }
 }
 
@@ -163,8 +158,7 @@ function createAppendCard(currBook, page) {
      let cardUl = document.createElement("ul");
      cardUl.className = "card-author-year";
      let cardYear = document.createElement("li");
-     debugger; 
-     // nedd check for with page are the cards
+     // need check for with page are the cards(bc for home are using api obj /for  fav are using my own book obj)
      if(page.className=="cards-container-fav"){
           cardYear.innerText = ("year: " + (year ? year.slice(5).trim() : "-"));
      }
@@ -201,7 +195,6 @@ function createAppendCard(currBook, page) {
           cardButton.className = "cardFavBtn";
           cardButton.innerText = "add to Fav";
           cardButton.id = "favButton" + bookID;
-
           cardButton.addEventListener("click",function(){
                let bookObjID = bookID;
                let title = document.getElementById(`title${bookID}`).innerText;

@@ -48,8 +48,14 @@
      </div>
 
      <div id="favourites" class="favourites-style">
+          <div id="fav-page-title-container">
+               <h1>Favourites <span>&#10084;</span></h1>
+          </div>
           <div class="cards-container-fav">
-               <div class="card">
+               <div class="fav-empty-container">
+                    <h1>Favourites page is empty</h1>
+               </div>
+               <!-- <div class="card">
                     <img class="card-img" src="https://images-na.ssl-images-amazon.com/images/I/91w+VNB7wwL.jpg"
                          alt="Card image cap">
                     <div class="card-title-desc">
@@ -73,12 +79,8 @@
                          <button>Like</button>
                          <button>Dislike</button>
                     </div>
-               </div>
+               </div> -->
                <!-- fetching data from JSON server  -->
-
-
-
-
 
           </div>
      </div>
@@ -94,7 +96,10 @@
           </div>
 
           <div class="cards-container">
-              <!--<div class="card">
+               <div id="welcomeImg-container">
+                    <img src="assets/welcomeimg2.jpg" alt="welcomeImg">
+               </div>
+               <!--<div class="card">
                     <img class="card-img" src="https://images-na.ssl-images-amazon.com/images/I/91w+VNB7wwL.jpg"
                          alt="Card image cap">
                     <div class="card-title-desc">
@@ -160,11 +165,11 @@
                          </form>
 
                     </div> -->
-               </div>
-
-               <!-- fetching data  from GOOGLE book API-->
-               
           </div>
+
+          <!-- fetching data  from GOOGLE book API-->
+
+     </div>
 
 
      </div>
@@ -194,6 +199,7 @@
 
 
      <!-- functions -->
+     <script src="scripts/loadingSpinner.js"></script>
      <script src="scripts/hashRouter.js"></script>
      <script src="scripts/JSONserverRequests.js"></script>
      <script src="scripts/favourites_functions.js"></script>
